@@ -3,13 +3,13 @@ class Solution {
         int low = 0, high = numbers.length-1;
         while(low<=high){
             if(numbers[low]+ numbers[high] == target){
-                return new int[] {low+1,high+1};
+                break;
             }else if(numbers[low]+ numbers[high] > target){
                 high--;
             }else{
                 low++;
             }
         }
-        return new int[] {0,0};
+        return new int[] {low+1,high+1};
     }
 }
