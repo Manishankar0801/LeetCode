@@ -5,11 +5,9 @@ class Solution {
             HashMap<Integer, Integer> hashmap = new HashMap<>();
             for(int j=i+1;j<nums.length;j++){
                 int sum = -(nums[i]+nums[j]);
-                if(hashmap.containsKey(sum) ){
+                if(hashmap.containsKey(sum)){
                     List<Integer> w = new ArrayList<Integer>();
-                    w.add(nums[i]);
-                    w.add(nums[j]);
-                    w.add(sum);
+                    w.addAll(Arrays.asList(sum,nums[i],nums[j]));
                     Collections.sort(w);
                     result.add(w);
                 }
