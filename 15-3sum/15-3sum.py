@@ -2,7 +2,7 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         result = []
         for i in range(len(nums)):
-            d=dict()
+            d={}
             
             for j in range(i+1,len(nums)):
                 b = -(nums[i]+nums[j])
