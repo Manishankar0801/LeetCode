@@ -11,8 +11,7 @@ class Solution:
                     a.sort()
                     if a not in result:
                         result.append(a)
-                else:
-                    d[b]=nums[j]
+                d[b]=nums[j]
         return result
                     
        
