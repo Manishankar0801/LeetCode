@@ -7,4 +7,6 @@ class Solution:
             if j < len(s):
                 if i == s[j]:
                     j += 1
-        return True if j == len(s) else False
+        if j == len(s):
+            return True
+        return False 
