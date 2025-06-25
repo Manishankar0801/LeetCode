@@ -3,16 +3,22 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-    let minValue = prices[0]
-    let maxProfit = 0
+    let minValue = prices[0] // initially set minValue as first value
+    let maxProfit = 0 // initially profit is zero
     for (let i=1;i<prices.length;i++) {
+        // we need to calculate the profit for currentValue and minValue
+        // if its greater than the maxProfit, update maxProfit else continue
         if (prices[i]-minValue > maxProfit) {
             maxProfit = prices[i] - minValue
         }
+
+        // keeping track of minValue
+        // if current value is less then minValue then we need to update the minValue.
         if(prices[i]<minValue) {
             minValue = prices[i]
         }
     }
+    // return maxProfit at the end
     return maxProfit
 };
 
