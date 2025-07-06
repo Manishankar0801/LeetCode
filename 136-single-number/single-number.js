@@ -3,18 +3,9 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    let hash = {}
+    let x = 0
     for (const value of nums) {
-        if (hash[value]) {
-            hash[value]++
-        } else {
-            hash[value] = 1
-        }
+        x = x ^ value
     }
-    console.log(hash)
-    for (const value of nums) {
-        if (hash[value] === 1) {
-            return value
-        }
-    }
+    return x
 };
