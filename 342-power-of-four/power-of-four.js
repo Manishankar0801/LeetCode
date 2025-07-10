@@ -1,7 +1,13 @@
-/**
- * @param {number} n
- * @return {boolean}
- */
 var isPowerOfFour = function(n) {
-    return n > 0 && Math.log2(n)%2 === 0
+    if(n==1)
+    {
+        return true;
+    }
+    else if(n<1)
+    {
+        return false;
+    }
+    else {
+        return isPowerOfFour(n/4.0);
+    }
 };
